@@ -10,7 +10,7 @@ All basic functions accept arrays or vectors where appropriate.
 * mode
 
 ##Less basic but still kinda basic
-* standard_deviation - accepts a vector / array and you can specificy if you want to calculate population or sample
+* standard_deviation - accepts a vector / array and you can specificy sample or population (population is default)
 
 ##NR Files
 * put_file_in_vector - converts elements separated by a character into a vector
