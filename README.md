@@ -1,5 +1,5 @@
 # NRCPP
-Useful C++ functions for tasks from stats to file IO
+Useful C++ functions for tasks from stats to file IO.
 
 ##NR Stats
 ###Basic
