@@ -9,7 +9,7 @@ All basic functions accept arrays or vectors where appropriate.
 * median
 * mode
 
-##Less basic but still kinda basic
+###Less basic but still kinda basic
 * standard_deviation - accepts a vector / array and you can specificy sample or population (population is default)
 
 ##NR Files
