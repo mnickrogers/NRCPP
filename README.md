@@ -1,8 +1,6 @@
 # NRCPP
 Useful C++ functions for tasks from stats to file IO.
 
-NOTE: nr_files.hpp requires a function in nr_string.hpp that is forthcoming
-
 ##NR Stats
 ###Basic
 All basic functions accept arrays or vectors where appropriate.
