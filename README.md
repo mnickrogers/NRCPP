@@ -13,7 +13,7 @@ All basic functions accept arrays or vectors where appropriate.
 * standard_deviation - accepts a vector / array and you can specificy sample or population (population is default)
 
 ##NR Files
-* put_file_in_vector - converts elements separated by a character into a vector
+* put_file_in_vector - converts elements separated by a specified character into a vector
 * get_words_from_file - extracts individual words from a file and places them into a vector
 * get_lines_from_file - extracts individual lines from a file and places them into a vector
 * get_string_from_file - this is incomplete
