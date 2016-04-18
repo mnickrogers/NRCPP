@@ -126,6 +126,50 @@ namespace nr
         T sqr_mean = mean(a, size, sample);
         return sqrt(sqr_mean);
     }
+    
+    template <class T>
+    size_t count_for_item(T a[], size_t size, T item)
+    {
+        size_t count(0);
+        
+        for (size_t i = 0; i < size; i++)
+            if (a[i] == item) count++;
+        
+        return count;
+    }
+    
+    template <class T>
+    size_t count_for_item(std::vector<T> v, T item)
+    {
+        size_t count(0);
+        
+        for (typename std::vector<T>::iterator it = v.begin(); it != v.end(); it++)
+            if (*it == item) count++;
+        
+        return count;
+    }
+    
+    template <class T>
+    double standard_deviation_of_matching_items(T a[], size_t size, T item, bool sample)
+    {
+        std::vector<double> v;
+        
+        for (size_t i = 0; i < size; i++)
+            if (a[i] == item) v.push_back(i);
+        
+        return standard_deviation(v, sample);
+    }
+    
+    template <class T>
+    double standard_deviation_of_matching_items(std::vector<T> v, T item, bool sample)
+    {
+        std::vector<double> numVec;
+        
+        for (size_t i = 0; i < v.size(); i++)
+            if (v[i] == item) numVec.push_back(i);
+        
+        return standard_deviation(numVec, sample);
+    }
 }
 
 #endif /* nr_stats_hpp */
