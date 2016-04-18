@@ -44,7 +44,7 @@ This class is inspired by Apple's Foundation NSScanner.
     std::string result = s.scan_up_to_string(targetString);
     
     std::cout << result << std::endl;
-Outputs: This 
+Outputs: "This "
 
 #####Extracting multiple values in-between matching strings:
 
@@ -62,6 +62,6 @@ Outputs: This
     }
     
     std::cout << result << std::endl;
-Outputs: is a and this is more data in-between a
+Outputs: "is a and this is more data in-between a"
 
 C++ has built-in, optimized functions for finding matches in strings just as Foundation's NSString has class methods for the like, but the hope here was to expose a more customizable interface to give granular control over how, for example, special characters, numbers and spaces are considered when scanning.
