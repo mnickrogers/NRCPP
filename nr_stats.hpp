@@ -3,6 +3,8 @@
 //  Copyright © 2016 Nicholas Rogers.
 //
 
+#pragma once
+
 #ifndef nr_stats_hpp
 #define nr_stats_hpp
 

@@ -3,6 +3,8 @@
 //  Copyright © 2016 Nicholas Rogers.
 //
 
+#pragma once
+
 #ifndef nr_files_hpp
 #define nr_files_hpp
 
@@ -67,7 +69,7 @@ namespace nr
                 std::istringstream ss(s);
                 char c;
                 while (ss.get(c))
-                    if (!isGenericIgnorableCharacter(c))
+                    if (!isNotAlphanumeric(c))
                         insert += c;
                 if (!insert.empty())
                     v.push_back(insert);
@@ -106,7 +108,7 @@ namespace nr
                 std::istringstream ss(s);
                 char c;
                 while (ss.get(c))
-                    if (!isGenericIgnorableCharacter(c))
+                    if (!isNotAlphanumeric(c))
                         insert += c;
                 if (!insert.empty())
                     set.insert(insert);
@@ -126,7 +128,7 @@ namespace nr
     
     std::string string_from_file(const std::string & filename)
     {
-        std::string s;
+        std::string result;
         
         assert(!filename.empty());
         
@@ -139,10 +141,23 @@ namespace nr
         
         while (!is.eof())
         {
+            std::string s;
+            std::getline(is, s);
+            std::istringstream ss(s);
             
+            char c;
+            while (ss >> c)
+                if (ss.peek() == '\n' || ss.peek() == ' ')
+                {
+                    result += c;
+                    result += ' ';
+                }
+                else
+                    result += c;
+            result += ' ';
         }
         
-        return s;
+        return result;
     }
     
     std::vector<std::string> get_lines_from_file(const std::string & filename)
