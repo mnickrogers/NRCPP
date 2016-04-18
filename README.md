@@ -18,7 +18,8 @@ All basic functions accept arrays or vectors where appropriate.
 * put_file_in_vector - converts elements separated by a specified character into a vector
 * get_words_from_file - extracts individual words from a file and places them into a vector
 * get_lines_from_file - extracts individual lines from a file and places them into a vector
-* get_string_from_file - this is incomplete
+* get_unique_word_set_from_file - returns a set of unique words from a file where there are no duplicates
+* get_string_from_file - turns a file into one string
 * get_word_count_in_file - returns the number of times a word appears in a file
 * get_word_count_from_unordered_set_in_file - returns the number of times items in a set appear in a file
 * get_word_count_from_vector_in_file - returns the number of times items in a vector appear in a file
