@@ -34,7 +34,7 @@ All basic functions accept arrays or vectors where appropriate.
 * get_word_count_from_string_matching_array - returns the number of times strings in an array appear as substrings of another string
 
 ##NR Scanner
-This class is inspired by Apple's Foundation NSScanner. An example:
+This class is inspired by Apple's Foundation NSScanner.
 #####Extracting parts of a string until a match:
 
     std::string testString("This string is a string and this is more data in-between a string");
@@ -63,3 +63,5 @@ Outputs: This
     
     std::cout << result << std::endl;
 Outputs: is a and this is more data in-between a
+
+C++ has built-in, optimized functions for finding matches in strings just as Foundation's NSString has class methods for the like, but the hope here was to expose a more customizable interface to give granular control over how, for example, special characters, numbers and spaces are considered when scanning.
