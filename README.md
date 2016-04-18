@@ -11,6 +11,8 @@ All basic functions accept arrays or vectors where appropriate.
 
 ###Less basic but still kinda basic
 * standard_deviation - accepts a vector / array and you can specificy sample or population (population is default)
+* count_for_item - accepts a vector / array and returns the times a given item appears in it
+* standard_deviation_of_matching_items - accepts a vector / array and returns the standard deviation of indices for matching items
 
 ##NR Files
 * put_file_in_vector - converts elements separated by a specified character into a vector
