@@ -53,6 +53,51 @@ namespace nr
         return v;
     }
     
+    std::vector<std::vector<std::string>> load_csv_file(const std::string & filename, bool ignoreFirstLine)
+    {
+        std::fstream is(filename);
+        assert(!is.fail());
+        
+        std::vector<std::vector<std::string>> mainVec;
+        std::size_t lineNum(0);
+        
+        while (!is.eof())
+        {
+            if (lineNum == 0 && ignoreFirstLine)
+            {
+                std::string dummy;
+                std::getline(is, dummy);
+                lineNum++;
+                continue;
+            }
+            
+            std::vector<std::string> subVec;
+            std::string lineString;
+            std::getline(is, lineString);
+            std::string temp;
+            
+            for (std::size_t i = 0; i < lineString.length(); i++)
+            {
+                if (lineString[i] == ',')
+                {
+                    subVec.push_back(temp);
+                    temp.clear();
+                }
+                else
+                    temp += lineString[i];
+            }
+            
+            subVec.push_back(temp);
+            
+            if (!subVec.empty())
+                mainVec.push_back(subVec);
+            
+            lineNum++;
+        }
+        
+        return mainVec;
+    }
+    
     std::vector<std::string> get_words_from_file(const std::string & filename, bool exclude_punctuation)
     {
         std::vector<std::string> v;
