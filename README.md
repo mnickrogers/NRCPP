@@ -1,20 +1,20 @@
 # NRCPP
 Useful C++ functions for tasks from stats to file IO.
 
-##NR Stats
-###Basic
+## NR Stats
+### Basic
 All basic functions accept arrays or vectors where appropriate.
 
 * mean - allows specification of value to substract with when averaging. This is useful for standard deviation calculations.
 * median
 * mode
 
-###Less basic but still kinda basic
+### Less basic but still kinda basic
 * standard_deviation - accepts a vector / array and you can specificy sample or population (population is default)
 * count_for_item - accepts a vector / array and returns the times a given item appears in it
 * standard_deviation_of_matching_items - accepts a vector / array and returns the standard deviation of indices for matching items
 
-##NR Files
+## NR Files
 * put_file_in_vector - converts elements separated by a specified character into a vector
 * load_csv_file - loads a csv file into a vector of vectors of strings
 * get_words_from_file - extracts individual words from a file and places them into a vector
@@ -25,11 +25,11 @@ All basic functions accept arrays or vectors where appropriate.
 * get_word_count_from_unordered_set_in_file - returns the number of times items in a set appear in a file
 * get_word_count_from_vector_in_file - returns the number of times items in a vector appear in a file
 
-##NR Utilities
+## NR Utilities
 * convert_array_string_to_double - converts an array of strings into an array of doubles
 * convert_vector_string_to_double - converts a vector of strings into a vector of doubles
 
-##NR Strings
+## NR Strings
 * isPunctuation - returns true if character is a puncuation mark (currently highly restrictive)
 * isNotAlphanumeric - returns true if the character is not alphanumeric
 * get_words_in_string - tokenizes a string into words
@@ -37,9 +37,9 @@ All basic functions accept arrays or vectors where appropriate.
 * get_word_count_from_string_matching_vector - returns the number of times strings in a vector appear as substrings of another string
 * get_word_count_from_string_matching_array - returns the number of times strings in an array appear as substrings of another string
 
-##NR Scanner
+## NR Scanner
 This class is inspired by Apple's Foundation NSScanner.
-#####Extracting parts of a string until a match:
+##### Extracting parts of a string until a match:
 
     std::string testString("This string is a string and this is more data in-between a string");
     nr::scanner s(testString);
@@ -50,7 +50,7 @@ This class is inspired by Apple's Foundation NSScanner.
     std::cout << result << std::endl;
 Outputs: "This "
 
-#####Extracting multiple values in-between matching strings:
+##### Extracting multiple values in-between matching strings:
 
     std::string testString("This string is a string and this is more data in-between a string");
     nr::scanner s(testString);
